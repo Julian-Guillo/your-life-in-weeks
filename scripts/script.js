@@ -130,7 +130,6 @@ function getWeekRange(dateString) {
 function generateCalendar(data) {
   const calendarContainer = document.getElementById('calendar-container');
   calendarContainer.innerHTML = '';  // Clear any existing squares
-
   const currentDate = new Date();  // Get the current date
 
   data.forEach(row => {
@@ -165,8 +164,26 @@ function generateCalendar(data) {
       square.classList.add('square');
     }
 
-    // Set hover tooltip for week range
-    square.setAttribute('title', `Week: ${weekRange.start} - ${weekRange.end}`);
+    // Custom tooltip for week range
+    const tooltip = document.createElement('div');
+    tooltip.classList.add('custom-tooltip');
+    tooltip.innerHTML = `Week: ${weekRange.start} - ${weekRange.end}`;
+
+    // Show custom tooltip on hover
+    square.addEventListener('mouseover', () => {
+      calendarContainer.appendChild(tooltip);
+      tooltip.style.display = 'block';
+    });
+
+    square.addEventListener('mousemove', (e) => {
+      tooltip.style.top = e.pageY + 10 + 'px';
+      tooltip.style.left = e.pageX + 10 + 'px';
+    });
+
+    square.addEventListener('mouseleave', () => {
+      tooltip.style.display = 'none';
+      calendarContainer.removeChild(tooltip);
+    });
 
     // Append the square/rectangle to the main calendar container
     calendarContainer.appendChild(square);
@@ -174,6 +191,7 @@ function generateCalendar(data) {
 
   generateProgressBar(data[0].Date); // populate progress bar
 }
+
 
 
 

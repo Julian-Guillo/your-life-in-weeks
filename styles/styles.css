@@ -84,20 +84,15 @@ ul li {
   max-height: 10vh; /* Restrict container height to the viewport height */
 }
 
-.year-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2px;
-  padding: 8px;
-  justify-content: left;
-  font-size: 14px;
-}
-
 .square {
   background-color: #FFFFFF; /* Light Gray for empty events */
   width: 10px;
   height: 30px;
   border: 1px solid #D3D3D3;
+}
+
+.square:hover {
+  background-color: #0b8f2a; 
 }
 
 .current {
@@ -123,6 +118,25 @@ ul li {
   min-width: 25px;
   box-sizing: border-box;
   word-wrap: break-word;
+  white-space: nowrap;
+}
+
+.rectangle:hover {
+  color: #0b8f2a; 
+  border: 1.5px solid #0b8f2a;
+}
+
+.custom-tooltip {
+  position: absolute;
+  display: none;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  z-index: 1000;
   white-space: nowrap;
 }
 
@@ -179,4 +193,8 @@ ul li {
 .progress-text {
   position: relative;
   z-index: 1;
+}
+
+.margin {
+  height: 100px;
 }
