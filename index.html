@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your life in weeks</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- Include the local xlsx library -->
+    <script src="libs/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- New section with title and form -->
+      <div class="intro">
+        <h1>Your Life in Weeks</h1>
+        <br />
+        <form id="dob-form">
+          <label for="dob">1. Enter your date of birth:</label>
+          <input type="date" id="dob" name="dob" required />
+          <button type="button" onclick="generateTemplate()">
+            Generate Template
+          </button>
+          <br />
+          <p>2. Fill the template with your life's main events</p>
+          <ul>
+            <li>
+              <em><b>Date: </b>Do not modify</em>
+            </li>
+            <li>
+              <em
+                ><b>Event: </b>Event that happened that week (no need to fill
+                all weeks!)</em
+              >
+            </li>
+            <li>
+              <em
+                ><b>Detailed_text: </b>More details about the event
+                (optional)</em
+              >
+            </li>
+          </ul>
+          <p>
+            You can Upload the empty template you just generated to check how
+            your life looks and the percentage you have lived so far.
+          </p>
+          <p>
+            3. Upload filled template:
+            <input type="file" id="upload" class="file-input" accept=".xlsx" />
+          </p>
+        </form>
+        <br />
+      </div>
+      <br />
+
+      <div id="progress-bar-container"></div>
+      <br />
+      <div id="calendar-container"></div>
+
+      <!-- Modal -->
+      <div id="event-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modal-title"></h2>
+          <p id="modal-text"></p>
+        </div>
+      </div>
+
+      <!-- Custom script -->
+      <script src="scripts/script.js"></script>
+    </div>
+  </body>
+</html>

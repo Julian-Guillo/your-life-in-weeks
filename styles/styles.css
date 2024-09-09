@@ -1,0 +1,182 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  overflow-y: auto;  /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.intro {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+h1:hover {
+  color:#0b8f2a;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="date"] {
+  margin-bottom: 10px;
+}
+
+p {
+  padding: 20px;
+  margin: 0px;
+}
+
+button {
+  background-color: #0b8f2a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0A571C;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  text-align: left;
+}
+
+#calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 20px;
+  justify-content: left;  
+  max-height: 10vh; /* Restrict container height to the viewport height */
+}
+
+.year-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 8px;
+  justify-content: left;
+  font-size: 14px;
+}
+
+.square {
+  background-color: #FFFFFF; /* Light Gray for empty events */
+  width: 10px;
+  height: 30px;
+  border: 1px solid #D3D3D3;
+}
+
+.current {
+  background-color: #FF6347; /* Strong color for current week */
+  border: 1px solid #FF4500; /* Slightly darker border */
+  color: white;
+}
+
+.future {
+  background-color: #D3D3D3; /* Soft grey for future weeks */
+  border: 1px solid #A9A9A9; /* Slightly darker border */
+}
+
+.rectangle {
+  background-color: #FFFFFF; /* White for events with text */
+  padding: 2px 5px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+  width: auto;
+  min-width: 25px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+}
+
+#progress-bar-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  border: 1px solid #9ab6a4;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.progress-bar {
+  height: 30px;
+  background-color: #0b8f2a; /* Green color for the progress bar */
+  text-align: center;
+  color: white;
+  line-height: 30px;
+  font-weight: bold;
+  transition: width 0.5s;
+}
+
+.progress-text {
+  position: relative;
+  z-index: 1;
+}
