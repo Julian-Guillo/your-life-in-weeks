@@ -41,9 +41,9 @@ function generateTemplate() {
       ) {
         if (age === 80) {
           event = "Your theoretical life expiraxy date";
+          extraDetails = "According to statistics, if you don't have any accidental death, you have more or less until here to live. Progress bar of your life is calculated based on this date";
         } else {
           event = `${age} in ${currentYear}`;
-          extraDetails = "According to statistics, if you don't have any accidental death, you have more or less until here to live. Progress bar of your life is calculated based on this date"
         }
       }
     }
@@ -157,7 +157,7 @@ function generateCalendar(data) {
       square.addEventListener('click', () => {
         // Update modal with week range and event details
         const modalTitleText = `${weekRange.start} - ${weekRange.end}`;
-        const modalContent = `<h5>${row.Event}</h5><p>${row.Extra_details}</p>`;
+        const modalContent = `<p><b>${row.Event}</b></p><p>${row.Extra_details}</p>`;
         openModal(modalTitleText, modalContent);
       });
     } else {

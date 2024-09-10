@@ -14,6 +14,14 @@
       <!-- New section with title and form -->
       <div class="intro">
         <h1>Your Life in Weeks</h1>
+        <p>
+          made by <a href="https://github.com/Julian-Guillo/">Julius</a> | with
+          love from
+          <a href="https://github.com/Julian-Guillo/your-life-in-weeks"
+            >Github</a
+          >
+        </p>
+        <br />
         <br />
         <form id="dob-form">
           <label for="dob">1. Enter your date of birth:</label>
@@ -40,9 +48,8 @@
               >
             </li>
           </ul>
-          <p>
-            You can Upload the empty template you just generated to check how
-            your life looks and the percentage you have lived so far.
+          <p class="tip">
+            Tip: You can upload the empty template to test the website
           </p>
           <p>
             3. Upload filled template:
@@ -56,13 +63,11 @@
       <div id="progress-bar-container"></div>
       <br />
       <div id="calendar-container"></div>
-      <br />
-      <br />
       <!-- Modal -->
       <div id="event-modal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <h2 id="modal-title"></h2>
+          <h4 id="modal-title"></h4>
           <p id="modal-text"></p>
         </div>
       </div>
