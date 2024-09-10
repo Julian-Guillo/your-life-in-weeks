@@ -23,7 +23,7 @@ function generateTemplate() {
   let age = 0;
 
   // Generate 80 years' worth of weeks
-  while (age <= 100) {
+  while (age <= 90) {
     const dateStr = currentDate.toISOString().split('T')[0]; // Convert date to 'YYYY-MM-DD'
     let event = '';
     let extraDetails = '';
@@ -43,6 +43,7 @@ function generateTemplate() {
           event = "Your theoretical life expiraxy date";
         } else {
           event = `${age} in ${currentYear}`;
+          extraDetails = "According to statistics, if you don't have any accidental death, you have more or less until here to live. Progress bar of your life is calculated based on this date"
         }
       }
     }

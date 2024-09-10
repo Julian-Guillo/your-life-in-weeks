@@ -92,7 +92,8 @@ ul li {
 }
 
 .square:hover {
-  background-color: #0b8f2a; 
+  background-color: #0b8f2a;
+  opacity: 0.5;
 }
 
 .current {
