@@ -76,7 +76,15 @@ function generateTemplate() {
   XLSX.writeFile(workbook, 'Life_Weeks_Template.xlsx');
 }
 
-document.getElementById('upload').addEventListener('change', handleFileUpload);
+// Add upload functionality
+const uploadInput = document.getElementById('upload');
+
+uploadInput.addEventListener('click', () => {
+  uploadInput.value = ''; // Reset the value
+});
+
+uploadInput.addEventListener('change', handleFileUpload);
+
 const modal = document.getElementById('event-modal');
 const modalTitle = document.getElementById('modal-title');
 const modalText = document.getElementById('modal-text');
